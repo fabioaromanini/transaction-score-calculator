@@ -5,6 +5,7 @@ const corsHeaders = {
 
 module.exports = {
   calculateScore: async event => {
+    const { cpf, cc, total_amount: totalAmount } = JSON.parse(event.body);
     return {
       statusCode: 200,
       body: 'bar',
