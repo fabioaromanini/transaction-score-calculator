@@ -19,5 +19,8 @@
   "homepage": "https://github.com/fabioaromanini/transaction-score-calculator#readme",
   "devDependencies": {
     "serverless": "^1.61.3"
+  },
+  "dependencies": {
+    "alasql": "^0.5.4"
   }
 }
