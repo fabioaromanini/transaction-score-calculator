@@ -9,7 +9,7 @@ Rest API for calculating financial transactions scores, given a list of fake cre
 **Core**
 
 - ~~Copy serverless and circle-ci boilerplate from trampo certo~~
-- Mock list of credit-card transactions
+- ~~Mock SQL data~~
 - Endpoint for transaction score calculation
   - Calculate Credit Card score with SQL
   - Integrate with trampo certo
@@ -24,3 +24,4 @@ Rest API for calculating financial transactions scores, given a list of fake cre
 ### Done
 
 1. Copy serverless and circle-ci boilerplate from trampo certo
+2. Mock SQL data
