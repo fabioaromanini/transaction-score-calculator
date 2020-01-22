@@ -1,0 +1,17 @@
+service: transaction-score-calculator
+
+frameworkVersion: '>=1.1.0 <2.0.0'
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: ${opt:stage, 'dev'}
+
+functions:
+  calculateScore:
+    handler: src/handlers.calculateScore
+    events:
+      - http:
+          path: score
+          method: post
+          cors: true
