@@ -1,3 +1,4 @@
+const cpfService = require('../service/cpf');
 const creditCardService = require('../service/creditCard');
 const trampoCertoService = require('../service/trampoCerto');
 
@@ -10,9 +11,10 @@ module.exports = {
     const creditCardScore = creditCardService.getCreditCardScore(creditCardNumber);
     console.log(`Calculated ${creditCardScore} for ${creditCardNumber}`);
 
-    console.log(`Getting Trampo Certo information for ${cpf}`);
     try {
-      const cpfRating = await trampoCertoService.getCpfRating(cpf);
+      const trampoCertoRating = await trampoCertoService.getCpfRating(cpf);
+      console.log(`Got trampo certo rating ${trampoCertoRating} for ${cpf}`);
+      const cpfRating = cpfService.getNumericRating(trampoCertoRating);
       console.log(`Got CPF Rating ${cpfRating} for ${cpf}`);
       return {
         totalAmount,
