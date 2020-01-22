@@ -3,6 +3,8 @@ const cpfService = require('../service/cpf');
 
 module.exports = {
   createScore: async (totalAmount, cpf, creditCard) => {
+    if (!totalAmount || typeof totalAmount !== 'number') throw new Error(400);
+
     const creditCardNumber = creditCardService.getCreditCardNumber(creditCard);
     console.log(`Calculating score for ${creditCardNumber}`);
     const creditCardScore = creditCardService.getCreditCardScore(creditCardNumber);
