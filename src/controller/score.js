@@ -18,7 +18,7 @@ module.exports = {
         cpfRating,
       };
     } catch (e) {
-      console.log(e);
+      throw new Error(e.response.status);
     }
   },
 };
