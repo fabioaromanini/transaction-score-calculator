@@ -6,6 +6,11 @@ provider:
   name: aws
   runtime: nodejs12.x
   stage: ${opt:stage, 'dev'}
+  environment:
+    TRAMPO_CERTO_URL: ${self:custom.trampoCertoUrl}
+
+custom:
+  trampoCertoUrl: ${ env:TRAMPO_CERTO_URL, 'https://qvdbscsen0.execute-api.us-east-1.amazonaws.com/dev/'}
 
 functions:
   calculateScore:

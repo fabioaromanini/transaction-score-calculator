@@ -1,7 +1,9 @@
 const axios = require('axios');
 
+const { TRAMPO_CERTO_URL } = process.env;
+
 const cpfRatingsClient = axios.create({
-  baseURL: 'https://qvdbscsen0.execute-api.us-east-1.amazonaws.com/dev/',
+  baseURL: TRAMPO_CERTO_URL,
 });
 
 module.exports = {
