@@ -22,7 +22,7 @@ module.exports = {
     } catch (e) {
       statusCode = e.message;
       body = JSON.stringify(
-        `Request format: { cpf: "string", total_amount: "number", cc: { bin: "string", last4: "string" }}`
+        `Request format: { cpf: String, total_amount: Number, cc: { bin: String, last4: String }}`
       );
     } finally {
       return {
