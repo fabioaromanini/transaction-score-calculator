@@ -1,5 +1,5 @@
 const scoreController = require('./controller/score');
-require('./db/initialize');
+require('./db');
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
   'Access-Control-Allow-Credentials': true,
