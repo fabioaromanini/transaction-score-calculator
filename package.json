@@ -1,0 +1,23 @@
+{
+  "name": "transaction-score-calculator",
+  "version": "0.0.1",
+  "description": "Rest API that calculates fake scores for financial transactions",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "sls deploy -v",
+    "test": "exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fabioaromanini/transaction-score-calculator.git"
+  },
+  "author": "fabioaromanini",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fabioaromanini/transaction-score-calculator/issues"
+  },
+  "homepage": "https://github.com/fabioaromanini/transaction-score-calculator#readme",
+  "devDependencies": {
+    "serverless": "^1.61.3"
+  }
+}
