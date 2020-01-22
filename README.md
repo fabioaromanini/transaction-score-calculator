@@ -15,8 +15,9 @@ Expected request
   "total_amount": 87.99,
   "cpf":"94548325069",
   "cc": {
-  "bin":"548110",
-  "last4":"2104"
+    "bin":"548110",
+    "last4":"2104"
+  }
 }
 ```
 
