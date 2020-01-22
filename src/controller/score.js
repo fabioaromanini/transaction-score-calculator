@@ -1,15 +1,24 @@
 const creditCardService = require('../service/creditCard');
+const cpfService = require('../service/cpf');
 
 module.exports = {
-  createScore: (totalAmount, cpf, creditCard) => {
+  createScore: async (totalAmount, cpf, creditCard) => {
     const creditCardNumber = creditCardService.getCreditCardNumber(creditCard);
     console.log(`Calculating score for ${creditCardNumber}`);
     const creditCardScore = creditCardService.getCreditCardScore(creditCardNumber);
     console.log(`Calculated ${creditCardScore} for ${creditCardNumber}`);
-    return {
-      totalAmount,
-      creditCardScore,
-      cpfRating: Math.random(),
-    };
+
+    console.log(`Getting Trampo Certo information for ${cpf}`);
+    try {
+      const cpfRating = await cpfService.getCpfRating(cpf);
+      console.log(`Got CPF Rating ${cpfRating} for ${cpf}`);
+      return {
+        totalAmount,
+        creditCardScore,
+        cpfRating,
+      };
+    } catch (e) {
+      console.log(e);
+    }
   },
 };

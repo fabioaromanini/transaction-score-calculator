@@ -1,5 +1,6 @@
 const scoreController = require('./controller/score');
 require('./db');
+
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
   'Access-Control-Allow-Credentials': true,
@@ -8,7 +9,7 @@ const corsHeaders = {
 module.exports = {
   calculateScore: async event => {
     const { cpf, cc, total_amount: totalAmount } = JSON.parse(event.body);
-    const score = scoreController.createScore(totalAmount, cpf, cc);
+    const score = await scoreController.createScore(totalAmount, cpf, cc);
     return {
       statusCode: 200,
       body: JSON.stringify({
