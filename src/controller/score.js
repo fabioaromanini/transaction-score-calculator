@@ -1,5 +1,5 @@
 const creditCardService = require('../service/creditCard');
-const cpfService = require('../service/cpf');
+const trampoCertoService = require('../service/trampoCerto');
 
 module.exports = {
   createScore: async (totalAmount, cpf, creditCard) => {
@@ -12,7 +12,7 @@ module.exports = {
 
     console.log(`Getting Trampo Certo information for ${cpf}`);
     try {
-      const cpfRating = await cpfService.getCpfRating(cpf);
+      const cpfRating = await trampoCertoService.getCpfRating(cpf);
       console.log(`Got CPF Rating ${cpfRating} for ${cpf}`);
       return {
         totalAmount,
