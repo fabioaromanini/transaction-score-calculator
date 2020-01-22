@@ -21,6 +21,7 @@
     "serverless": "^1.61.3"
   },
   "dependencies": {
-    "alasql": "^0.5.4"
+    "alasql": "^0.5.4",
+    "axios": "^0.19.2"
   }
 }
