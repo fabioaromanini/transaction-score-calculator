@@ -10,7 +10,7 @@ provider:
     TRAMPO_CERTO_URL: ${self:custom.trampoCertoUrl}
 
 custom:
-  trampoCertoUrl: ${ env:TRAMPO_CERTO_URL, 'https://qvdbscsen0.execute-api.us-east-1.amazonaws.com/dev/'}
+  trampoCertoUrl: ${ env:TRAMPO_CERTO_URL, 'https://zyamaauxo2.execute-api.us-east-1.amazonaws.com/dev/'}
 
 functions:
   calculateScore:
