@@ -4,7 +4,7 @@ const corsHeaders = {
 };
 
 module.exports = {
-  cpfQuery: async event => {
+  calculateScore: async event => {
     return {
       statusCode: 200,
       body: 'bar',
