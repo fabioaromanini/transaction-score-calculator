@@ -9,4 +9,18 @@ describe('GetCreditCardNumber', () => {
 
     expect(creditCardService.getCreditCardNumber(creditCard)).toMatch('9454832-5069');
   });
+
+  test('Throws exception on invalid credit card', () => {
+    expect(() =>
+      creditCardService.getCreditCardNumber({
+        bin: '9454832',
+      })
+    ).toThrow();
+
+    expect(() =>
+      creditCardService.getCreditCardNumber({
+        last4: '5069',
+      })
+    ).toThrow();
+  });
 });

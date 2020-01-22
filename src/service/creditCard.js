@@ -1,7 +1,11 @@
 const alasql = require('alasql');
 
 module.exports = {
-  getCreditCardNumber: creditCard => `${creditCard.bin}-${creditCard.last4}`,
+  getCreditCardNumber: creditCard => {
+    if (!creditCard.last4 || !creditCard.bin) throw new Error(400);
+
+    return `${creditCard.bin}-${creditCard.last4}`;
+  },
   getCreditCardScore: creditCardNumber => {
     const response = alasql(
       `
