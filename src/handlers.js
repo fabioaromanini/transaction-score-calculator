@@ -8,9 +8,14 @@ const corsHeaders = {
 module.exports = {
   calculateScore: async event => {
     const { cpf, cc, total_amount: totalAmount } = JSON.parse(event.body);
+    const score = scoreController.createScore(totalAmount, cpf, cc);
     return {
       statusCode: 200,
-      body: JSON.stringify(scoreController.createScore(totalAmount, cpf, cc)),
+      body: JSON.stringify({
+        TOTAL_AMOUNT: score.totalAmount,
+        CC_SCORE: score.creditCardScore,
+        CPF_RATING: score.cpfRating,
+      }),
       headers: corsHeaders,
     };
   },

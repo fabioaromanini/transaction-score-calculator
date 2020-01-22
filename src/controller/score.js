@@ -7,9 +7,9 @@ module.exports = {
     const creditCardScore = creditCardService.getCreditCardScore(creditCardNumber);
     console.log(`Calculated ${creditCardScore} for ${creditCardNumber}`);
     return {
-      TOTAL_AMOUNT: totalAmount,
-      CC_SCORE: creditCardScore,
-      CPF_RATING: Math.random(),
+      totalAmount,
+      creditCardScore,
+      cpfRating: Math.random(),
     };
   },
 };
