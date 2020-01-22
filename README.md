@@ -13,6 +13,7 @@ Rest API for calculating financial transactions scores, given a list of fake cre
 - ~~Endpoint for transaction score calculation~~
   - ~~Calculate Credit Card score with SQL~~
   - ~~Integrate with trampo certo~~
+  - Calculate numeric CPF rating
 
 **Extra**
 
