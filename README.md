@@ -14,8 +14,8 @@ Rest API for calculating financial transactions scores, given a list of fake cre
 
 **Extra**
 
-- Persist transactions in dynamo
-- Allow transactions retrieval by:
+- Persist scores in dynamo
+- Allow scores retrieval by:
   - CPF
   - Credit Card
 
